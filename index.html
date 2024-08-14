@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Personal Website</title>
+    <style>
+      .social-media-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(to right, #b8860b, #d2ac47, #ffd700);
+        color: black;
+        text-decoration: none;
+        transition: transform 0.3s;
+      }
+
+      .icon:hover {
+        transform: scale(1.1);
+      }
+
+      .icon i {
+        font-size: 40px;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/scripts.js" defer></script>
+    <script src="js/contacts.js" defer></script>
+    <script src="js/validation.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul style="list-style-type: none; padding: 0; margin: 0; display: flex">
+          <li style="position: relative; margin-right: 20px">
+            <a
+              href="index.html"
+              style="
+                text-decoration: none;
+                display: inline-block;
+                padding: 5px 0;
+                transition: transform 0.3s;
+              "
+            >
+              Home
+              <span
+                style="
+                  display: block;
+                  height: 2px;
+                  background: transparent;
+                  transition: background 0.3s;
+                "
+              ></span>
+            </a>
+          </li>
+          <li style="position: relative; margin-right: 20px">
+            <a
+              href="#about"
+              style="
+                text-decoration: none;
+                color: #cac6bb;
+                display: inline-block;
+                padding: 5px 0;
+                transition: transform 0.3s;
+              "
+            >
+              About
+              <span
+                style="
+                  display: block;
+                  height: 2px;
+                  background: transparent;
+                  transition: background 0.3s;
+                "
+              ></span>
+            </a>
+          </li>
+          <li style="position: relative; margin-right: 20px">
+            <a
+              href="#register"
+              style="
+                text-decoration: none;
+                color: #cac6bb;
+                display: inline-block;
+                padding: 5px 0;
+                transition: transform 0.3s;
+              "
+            >
+              Register
+              <span
+                style="
+                  display: block;
+                  height: 2px;
+                  background: transparent;
+                  transition: background 0.3s;
+                "
+              ></span>
+            </a>
+          </li>
+          <li style="position: relative; margin-right: 20px">
+            <a
+              href="#courses"
+              style="
+                text-decoration: none;
+                color: #cac6bb;
+                display: inline-block;
+                padding: 5px 0;
+                transition: transform 0.3s;
+              "
+            >
+              Courses
+              <span
+                style="
+                  display: block;
+                  height: 2px;
+                  background: transparent;
+                  transition: background 0.3s;
+                "
+              ></span>
+            </a>
+          </li>
+          <li style="position: relative; margin-right: 20px">
+            <a
+              href="#resume"
+              style="
+                text-decoration: none;
+                color: #cac6bb;
+                display: inline-block;
+                padding: 5px 0;
+                transition: transform 0.3s;
+              "
+            >
+              CV
+              <span
+                style="
+                  display: block;
+                  height: 2px;
+                  background: transparent;
+                  transition: background 0.3s;
+                "
+              ></span>
+            </a>
+          </li>
+          <li style="position: relative; margin-right: 20px">
+            <a
+              href="#contacts"
+              style="
+                text-decoration: none;
+                color: #cac6bb;
+                display: inline-block;
+                padding: 5px 0;
+                transition: transform 0.3s;
+              "
+            >
+              Contacts
+              <span
+                style="
+                  display: block;
+                  height: 2px;
+                  background: transparent;
+                  transition: background 0.3s;
+                "
+              ></span>
+            </a>
+          </li>
+          <li style="position: relative; margin-right: 20px">
+            <a
+              href="login.html"
+              style="
+                text-decoration: none;
+                color: #cac6bb;
+                display: inline-block;
+                padding: 5px 0;
+                transition: transform 0.3s;
+              "
+            >
+              Login
+              <span
+                style="
+                  display: block;
+                  height: 2px;
+                  background: transparent;
+                  transition: background 0.3s;
+                "
+              ></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="user-menu">
+        <button id="userButton">User</button>
+        <div id="userDropdown" class="dropdown-content">
+          <a href="#" id="logoutButton">Logout</a>
+        </div>
+      </div>
+      <button
+        id="themeToggle"
+        style="
+          position: absolute;
+          top: 15px;
+          right: 60px;
+          background: none;
+          border: none;
+          cursor: pointer;
+        "
+      >
+        <img
+          src="light-dark-icon.png"
+          alt="Toggle Theme"
+          style="width: 30px; height: 30px"
+        />
+      </button>
+    </header>
+    <main>
+      <section id="home">
+        <section class="hero fade-zoom">
+          <section style="height: 50px">
+            <h1
+              class="gold-gradient"
+              id="typing-text"
+              style="
+                font-size: 4em;
+                text-align: left;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 0.15em solid orange;
+                width: 22ch;
+                animation: blink-caret 0.75s step-end infinite;
+              "
+            ></h1>
+          </section>
+          <p style="color: #cac6bb">
+            <br /><br />
+            Hello! I'm <b style="color: #b8860b">Patrick Zablon</b>, a
+            passionate student currently pursuing
+            <b style="color: #b8860b"
+              >Bachelor of Science in Computer Science</b
+            >
+            at the <b style="color: #b8860b">University of Dar es Salaam.</b>
+          </p>
+          <p style="color: #cac6bb">
+            This website is a hub where you can learn more about my background,
+            education, courses I've taken, and my career goals. Feel free to
+            explore and get to know me better!
+          </p>
+        </section>
+        <section class="about-website fade-zoom">
+          <h2 class="gold-gradient">About This Website</h2>
+          <p style="color: #cac6bb">
+            This website is designed to showcase my journey and achievements.
+            Here’s what you can find on different pages:
+          </p>
+          <ul>
+            <li>
+              <strong>About:</strong> A detailed summary of my educational
+              background and current program.
+            </li>
+            <li>
+              <strong>Register:</strong> Create an account to access exclusive
+              content.
+            </li>
+            <li>
+              <strong>Courses:</strong> Information about the courses I've
+              taken, including descriptions, grades, and more.
+            </li>
+            <li><strong>CV:</strong> View my detailed CV.</li>
+            <li><strong>Contacts:</strong> Ways to get in touch with me.</li>
+          </ul>
+        </section>
+      </section>
+      <section id="about" class="fade-zoom">
+        <h1 class="gold-gradient" style="font-size: 3em">About</h1>
+        <section class="fade-zoom">
+          <h2 style="color: #cac6bb; text-align: left; font-size: xx-large">
+            Education Background
+          </h2>
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon
+                  name="book-outline"
+                  role="img"
+                  class="md hydrated"
+                  aria-label="book outline"
+                ></ion-icon>
+              </div>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title" style="font-size: x-large">
+                  B.Sc. in Computer Science, University of Dar es Salaam,
+                  Mlimani Campus, Dar es Salaam
+                </h4>
+
+                <span style="font-size: larger"
+                  ><em>Nov 2023 – Present</em></span
+                >
+
+                <p
+                  class="timeline-text"
+                  style="color: #cac6bb; font-size: larger"
+                >
+                  Learnt computer basics, discrete mathematics, logic, and some
+                  programming languages such as C and Java. Currently learning
+                  web programming using HTML/CSS and JavaScript.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title" style="font-size: x-large">
+                  A’ Level, Physics, Chemistry, and Mathematics (PCM), Mzumbe
+                  Secondary School, Morogoro
+                </h4>
+
+                <span style="font-size: larger"
+                  ><em>July 2021 – May 2023</em></span
+                >
+
+                <p
+                  class="timeline-text"
+                  style="color: #cac6bb; font-size: larger"
+                >
+                  Completed Advanced Certificate of Secondary Education
+                  Examination (ACSEE).
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title" style="font-size: x-large">
+                  O’ Level, Ilboru Secondary School, Arusha
+                </h4>
+
+                <span style="font-size: larger"
+                  ><em>Jan 2017 – Dec 2020</em></span
+                >
+
+                <p
+                  class="timeline-text"
+                  style="color: #cac6bb; font-size: larger"
+                >
+                  Completed Certificate of Secondary Education Examination
+                  (CSEE).
+                  <br /><br /><br />
+                </p>
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section class="fade-zoom">
+          <h2 style="color: #cac6bb; text-align: left; font-size: xx-large">
+            Current Programme: B.Sc. in Computer Science
+          </h2>
+          <section
+            style="
+              background: linear-gradient(to right, #b8860b, #d2ac47, #ffd700);
+              color: black;
+              padding: 10px;
+              margin: 5px 0;
+              border-radius: 5px;
+              font-size: large;
+            "
+            class="fade-zoom"
+          >
+            <p>
+              I am currently enrolled in the Bachelor of Science in Computer
+              Science at the University of Dar es Salaam, Mlimani Campus. I
+              chose this program because of my passion for technology and my
+              interest in understanding the fundamentals of computing and
+              programming. My favorite course so far is web programming, where I
+              am learning to build websites using HTML, CSS, and JavaScript. I
+              am part of a discussion group where we collaborate on assignments,
+              share knowledge, and help each other understand complex topics.
+            </p>
+          </section>
+        </section>
+        <section class="fade-zoom">
+          <h2 style="color: #cac6bb; text-align: left; font-size: xx-large">
+            Sponsorship
+          </h2>
+          <section
+            style="
+              background: linear-gradient(to right, #b8860b, #d2ac47, #ffd700);
+              color: black;
+              padding: 10px;
+              margin: 5px 0;
+              border-radius: 5px;
+              font-size: large;
+            "
+            class="fade-zoom"
+          >
+            <p>
+              I am currently sponsored by the Higher Education Students’ Loans
+              Board (HESLB) for my Bachelor of Science degree in Computer
+              Science at the University of Dar es Salaam. This sponsorship
+              supports my academic pursuits, covering tuition fees and other
+              educational expenses, allowing me to focus on my studies and
+              pursue my career goals in the field of technology.
+            </p>
+          </section>
+        </section>
+        <section class="fade-zoom">
+          <h2 style="color: #cac6bb; text-align: left; font-size: xx-large">
+            Career Goals
+          </h2>
+          <section
+            style="
+              background: linear-gradient(to right, #b8860b, #d2ac47, #ffd700);
+              color: black;
+              padding: 10px;
+              margin: 5px 0;
+              border-radius: 5px;
+              font-size: large;
+            "
+            class="fade-zoom"
+          >
+            <p>
+              My career goal is to become a proficient software developer,
+              specializing in web and mobile application development. I aim to
+              use my skills to create innovative solutions that can address
+              real-world problems and improve people's lives. Ultimately, I
+              aspire to work for a leading tech company or start my own tech
+              business, contributing to the growth of the tech industry in my
+              country and globally.
+            </p>
+          </section>
+        </section>
+      </section>
+      <section id="register" class="fade-zoom">
+        <h1 class="gold-gradient" style="font-size: 3em">Register</h1>
+        <form
+          class="fade-zoom"
+          id="registrationForm"
+          action="php/save_registration.php"
+          method="post"
+          enctype="multipart/form-data"
+          novalidate
+        >
+          <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required />
+            <span
+              class="error-message"
+              id="error-first_name"
+              style="color: red"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="middle_name">Middle Name:</label>
+            <input type="text" id="middle_name" name="middle_name" />
+          </div>
+
+          <div class="form-group">
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required />
+            <span
+              class="error-message"
+              id="error-surname"
+              style="color: red"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+            <span
+              class="error-message"
+              id="error-username"
+              style="color: red"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <span
+              class="error-message"
+              id="error-password"
+              style="color: red"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+            <span
+              class="error-message"
+              id="error-email"
+              style="color: red"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="mobile">Mobile:</label>
+            <input type="text" id="mobile" name="mobile" required />
+            <span
+              class="error-message"
+              id="error-mobile"
+              style="color: red"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="facebook">Facebook:</label>
+            <input type="text" id="facebook" name="facebook" />
+          </div>
+
+          <div class="form-group">
+            <label for="twitter">Twitter:</label>
+            <input type="text" id="twitter" name="twitter" />
+          </div>
+
+          <div class="form-group">
+            <label for="instagram">Instagram:</label>
+            <input type="text" id="instagram" name="instagram" />
+          </div>
+
+          <div class="form-group full-width">
+            <label for="cv">CV:</label>
+            <input type="file" id="cv" name="cv" required />
+            <span class="error-message" id="error-cv" style="color: red"></span>
+          </div>
+
+          <button type="submit">Register</button>
+        </form>
+      </section>
+      <section id="courses">
+        <h1 class="gold-gradient">My Courses</h1>
+        <div id="loggedOutMessage" style="display: none">
+          <p>Please log in to access your courses.</p>
+        </div>
+
+        <div id="courses_table" class="courses_table fade-zoom"></div>
+        <div id="course_form_container" class="fade-zoom">
+          <!-- Course form will be here if logged in -->
+        </div>
+      </section>
+      <section id="resume">
+        <h1 class="gold-gradient">Curriculum Vitae</h1>
+        <!-- <div id="cv_container"></div> -->
+        <embed
+          src="uploads/Curriculum Vitae.pdf"
+          type="application/pdf"
+          width="100%"
+          height="600px"
+        />
+      </section>
+      <section id="contacts" class="fade-zoom">
+        <h1 class="gold-gradient">Contact Information</h1>
+        <div id="contacts_container"></div>
+        <div class="social-media-icons">
+          <a href="https://facebook.com" class="icon facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://twitter.com" class="icon twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://instagram.com" class="icon instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/" class="icon"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://github.com/" class="icon"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://www.spotify.com/" class="icon"
+            ><i class="fab fa-spotify"></i
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2>Patrick Mwikwabe Zablon</h2>
+          <p>Registration Number: 2023-04-13882</p>
+          <p>BSc Computer Science, UDSM</p>
+        </div>
+        <div class="footer-right">
+          <h2>Contact Information</h2>
+          <p>
+            Email:
+            <a href="mailto:patrickzablon0@gmail.com" style="color: black"
+              >patrickzablon0@gmail.com</a
+            >
+          </p>
+          <p>Mobile: +255657002285</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Patrick Mwikwabe Zablon. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      document.querySelectorAll("nav ul li a").forEach(function (anchor) {
+        anchor.addEventListener("mouseover", function () {
+          this.querySelector("span").style.background = "#cac6bb";
+          this.style.transform = "scale(1.1)";
+        });
+        anchor.addEventListener("mouseout", function () {
+          this.querySelector("span").style.background = "transparent";
+          this.style.transform = "scale(1)";
+        });
+      });
+    </script>
+    <script>
+      function handleScroll() {
+        document.querySelectorAll(".fade-zoom").forEach(function (section) {
+          var rect = section.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom > 0) {
+            section.classList.add("visible");
+          } else {
+            section.classList.remove("visible"); // Remove the class if not in view
+          }
+        });
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      window.addEventListener("load", handleScroll);
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const texts = ["Welcome to my website..."];
+        let count = 0;
+        let index = 0;
+        let currentText = "";
+        let letter = "";
+        let isDeleting = false;
+
+        (function type() {
+          currentText = texts[count];
+
+          if (!isDeleting) {
+            letter = currentText.slice(0, ++index);
+          } else {
+            letter = currentText.slice(0, --index);
+          }
+
+          document.querySelector("#typing-text").textContent = letter;
+
+          if (!isDeleting && letter.length === currentText.length) {
+            setTimeout(() => {
+              isDeleting = true;
+              type();
+            }, 800); // Pause before deleting the text
+          } else if (isDeleting && letter.length === 0) {
+            isDeleting = false;
+            count++;
+            index = 0;
+            if (count === texts.length) {
+              count = 0;
+            }
+            setTimeout(type, 400); // Pause before typing again
+          } else {
+            setTimeout(type, 100); // Typing and deleting speed
+          }
+        })();
+      });
+    </script>
+    <script>
+      document
+        .getElementById("themeToggle")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("light-mode");
+          // Save the current theme to localStorage
+          if (document.body.classList.contains("light-mode")) {
+            localStorage.setItem("theme", "light");
+          } else {
+            localStorage.setItem("theme", "dark");
+          }
+        });
+
+      // Load the saved theme from localStorage
+      window.addEventListener("load", function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "light") {
+          document.body.classList.add("light-mode");
+        }
+      });
+    </script>
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          var isValid = true;
+
+          // Reset all error messages
+          var errorMessages = document.querySelectorAll(".error-message");
+          errorMessages.forEach(function (span) {
+            span.textContent = "";
+          });
+
+          // Validate first name
+          var firstName = document.getElementById("first_name").value.trim();
+          if (firstName === "") {
+            document.getElementById("error-first_name").textContent =
+              "Please enter your first name.";
+            isValid = false;
+          }
+
+          // Validate surname
+          var surname = document.getElementById("surname").value.trim();
+          if (surname === "") {
+            document.getElementById("error-surname").textContent =
+              "Please enter your surname.";
+            isValid = false;
+          }
+
+          // Validate username
+          var username = document.getElementById("username").value.trim();
+          if (username === "") {
+            document.getElementById("error-username").textContent =
+              "Please enter your username.";
+            isValid = false;
+          }
+          // Validate password length and complexity
+          var password = document.getElementById("password").value;
+          var passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])(?=.*[\W_]).{10,}$/;
+          if (!passwordRegex.test(password)) {
+            document.getElementById("error-password").textContent =
+              "Password must be at least 10 characters long and contain both letters, numbers, and special characters.";
+            isValid = false;
+          }
+          // Validate email format
+          var email = document.getElementById("email").value.trim();
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            document.getElementById("error-email").textContent =
+              "Please enter a valid email address.";
+            isValid = false;
+          }
+
+          // Validate mobile
+          var mobile = document.getElementById("mobile").value.trim();
+          if (mobile === "") {
+            document.getElementById("error-mobile").textContent =
+              "Please enter your mobile number.";
+            isValid = false;
+          }
+
+          // Validate CV upload
+          var cv = document.getElementById("cv").value.trim();
+          if (cv === "") {
+            document.getElementById("error-cv").textContent =
+              "Please upload your CV.";
+            isValid = false;
+          }
+
+          if (!isValid) {
+            event.preventDefault(); // Prevent the form from submitting if not valid
+          }
+        });
+    </script>
+  </body>
+</html>
